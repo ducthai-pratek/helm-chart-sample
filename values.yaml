@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: your-docker-registry/vietscop
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  className: ""
+  host: ""
+  path: /
+  pathType: Prefix

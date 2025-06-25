@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: registry.company.com/vietscop
+  tag: dev-123
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  className: nginx
+  host: vietscop.dev.company.com
+  path: /
+  pathType: Prefix
